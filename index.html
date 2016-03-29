@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+  <style>
+  body {
+    font: 14px / 1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .keyboard {
+
+  }
+  .keyboard ul {
+    font-size: 0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .keyboard li {
+    font-size: 1rem;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    color: #fff;
+  }
+  .btn-reset {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: -50px;
+    padding: 0.4em 0.8em;
+    background: #FFEB3B;
+    border: none;
+    border-radius: 2px;
+  }
+  .form {
+    width: 500px;
+    margin: 100px auto;
+  }
+  .input-section {
+    margin: 2em 0;
+  }
+  .label {
+    display: inline-block;
+    width: 5em;
+  }
+  input[type="text"],
+  input[type="password"] {
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 2em;
+    padding: .2em;
+    width: 180px;
+  }
+
+  .keyboard {
+    width: 200px;
+    margin-left: 5em;
+    border-radius: 4px;
+    position: relative;
+    visibility: hidden;
+  }
+  .keyboard:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 1em solid transparent;
+    border-width: 0 .6em .7em .6em;
+    border-bottom-color: #333;
+    position: absolute;
+    top: 0;
+    right: 1em;
+    margin-top: -.7em;
+  }
+  </style>
+</head>
+
+<body>
+  <form name="fangbei" method="post" action="check_session_login.php" class="form">
+    <div class="input-section">
+      <label for="input-username" class="label">用户名：</label>
+      <input type="text" name="username" id="input-username"/>
+      <div class="keyboard" id="keyboard-username">
+        <ul>
+          <li class="key">1</li>
+          <li class="key">2</li>
+          <li class="key">3</li>
+          <li class="key">4</li>
+          <li class="key">5</li>
+          <li class="key">6</li>
+          <li class="key">7</li>
+          <li class="key">8</li>
+          <li class="key">9</li>
+          <li class="key">0</li>
+        </ul>
+        <button type="button" name="button" class="btn-reset" id="btn-reset-username">清空</button>
+      </div>
+
+    </div>
+
+    <div class="input-section">
+      <label for="input-password" class="label">密码：</label>
+      <input type="password" name="passcode" id="input-password"/>
+      <div class="keyboard" id="keyboard-password">
+        <ul>
+          <li class="key">1</li>
+          <li class="key">2</li>
+          <li class="key">3</li>
+          <li class="key">4</li>
+          <li class="key">5</li>
+          <li class="key">6</li>
+          <li class="key">7</li>
+          <li class="key">8</li>
+          <li class="key">9</li>
+          <li class="key">0</li>
+        </ul>
+        <button type="button" name="button" class="btn-reset" id="btn-reset-password">清空</button>
+      </div>
+
+    </div>
+
+
+    <input type="submit" name="Submit" value="Submit" />
+    <script type="text/javascript">
+
+    var inputUsername = $('#input-username');
+    var inputPassword = $('#input-password');
+
+    $('#keyboard-username .key').click(function(){
+      inputUsername.val(inputUsername.val()+$(this).html());
+    })
+    $('#keyboard-password .key').click(function(){
+      inputPassword.val(inputPassword.val()+$(this).html());
+    })
+    $('#btn-reset-username').on('click',function(){
+      inputUsername.val('');
+    });
+    $('#btn-reset-password').on('click',function(){
+      inputPassword.val('');
+    });
+
+    $('#input-username').on('focus',function(){
+      $('.keyboard').css('visibility','hidden');
+      $('#keyboard-username').css('visibility','visible');
+    });
+    $('#input-password').on('focus',function(){
+      $('.keyboard').css('visibility','hidden');
+      $('#keyboard-password').css('visibility','visible');
+    });
+    </script>
+  </form>
+</body>
+</html>
