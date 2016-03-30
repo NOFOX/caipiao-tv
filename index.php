@@ -2,93 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1">
   <title>Document</title>
-  <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-  <style>
-  body {
-    font: 14px / 1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
-  }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  .keyboard {
-
-  }
-  .keyboard ul {
-    font-size: 0;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .keyboard li {
-    font-size: 1rem;
-    line-height: 40px;
-    text-align: center;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background: #333;
-    color: #fff;
-  }
-  .btn-reset {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-right: -50px;
-    padding: 0.4em 0.8em;
-    background: #FFEB3B;
-    border: none;
-    border-radius: 2px;
-  }
-  .form {
-    width: 500px;
-    margin: 100px auto;
-  }
-  .input-section {
-    margin: 2em 0;
-  }
-  .label {
-    display: inline-block;
-    width: 5em;
-  }
-  input[type="text"],
-  input[type="password"] {
-    background: #fff;
-    border: 1px solid #333;
-    border-radius: 4px;
-    font-size: 2em;
-    padding: .2em;
-    width: 180px;
-  }
-
-  .keyboard {
-    width: 200px;
-    margin-left: 5em;
-    border-radius: 4px;
-    position: relative;
-    visibility: hidden;
-  }
-  .keyboard:before {
-    content: '';
-    width: 0;
-    height: 0;
-    border: 1em solid transparent;
-    border-width: 0 .6em .7em .6em;
-    border-bottom-color: #333;
-    position: absolute;
-    top: 0;
-    right: 1em;
-    margin-top: -.7em;
-  }
-  </style>
+  <script src="jquery-2.2.2.min.js"></script>
+  <link rel="stylesheet" href="caipiao-tv.css">
 </head>
 
 <body>
   <form name="fangbei" method="post" action="check_session_login.php" class="form">
     <div class="input-section">
       <label for="input-username" class="label">用户名：</label>
-      <input type="text" name="username" id="input-username"/>
+      <input type="text" name="username" id="input-username" placeholder="用户名" autofocus autocomplete="off"/>
       <div class="keyboard" id="keyboard-username">
         <ul>
           <li class="key">1</li>
@@ -109,7 +33,7 @@
 
     <div class="input-section">
       <label for="input-password" class="label">密码：</label>
-      <input type="password" name="passcode" id="input-password"/>
+      <input type="password" name="passcode" id="input-password" placeholder="密码"/>
       <div class="keyboard" id="keyboard-password">
         <ul>
           <li class="key">1</li>
@@ -128,8 +52,9 @@
 
     </div>
 
+    <!-- <a href="index.php" class="test">刷新</a> -->
+    <input type="submit" name="Submit" value="登陆" class="btn-login"/>
 
-    <input type="submit" name="Submit" value="Submit" />
     <script type="text/javascript">
 
     var inputUsername = $('#input-username');
@@ -141,13 +66,15 @@
     $('#keyboard-password .key').click(function(){
       inputPassword.val(inputPassword.val()+$(this).html());
     })
+    // 清空按钮
     $('#btn-reset-username').on('click',function(){
       inputUsername.val('');
     });
     $('#btn-reset-password').on('click',function(){
       inputPassword.val('');
     });
-
+    // 键盘
+    $('#keyboard-username').css('visibility','visible');
     $('#input-username').on('focus',function(){
       $('.keyboard').css('visibility','hidden');
       $('#keyboard-username').css('visibility','visible');
