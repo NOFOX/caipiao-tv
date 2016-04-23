@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>ad</title>
+  <style>
+  .ad-wrapper {
+    width: 100vw;
+    height: 80px;
+    overflow: hidden;
+    background: #eee;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  .ad-items {
+    width: 400vw;
+    display: flex;
+    /*-webkit-animation: ad-carousel 12s infinite steps(4);*/
+    /*animation: ad-carousel 12s infinite steps(4);*/
+  }
+  @-webkit-keyframes ad-carousel {
+    from{
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      background: #eee;
+    }
+    to{
+      -webkit-transform: translateX(-400vw);
+      transform: translateX(-400vw);
+      background: #333;
+    }
+  }
+  @keyframes ad-carousel {
+    from{
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      background: #eee;
+    }
+    to{
+      -webkit-transform: translateX(-400vw);
+      transform: translateX(-400vw);
+      background: #333;
+    }
+  }
+
+  .ad-item {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    /*background: tomato;*/
+  }
+  .ad-item:first-child {
+    visibility: visible;
+  }
+  .ad-item:nth-child(2n){
+    /*background: tomato;*/
+  }
+  .ad-item img {
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+  <!-- ad start -->
+  <div class="ad-wrapper">
+    <div class="ad-items" id="ad-items" id="ad-items">
+
+      <div class="ad-item item active" id="ad-item-1">
+        <img src="../images/01.png" alt="ad1" />
+      </div>
+
+      <div class="ad-item item" id="ad-item-2">
+        <img src="../images/02.png" alt="ad2" />
+      </div>
+
+      <div class="ad-item item" id="ad-item-3">
+        <img src="../images/03.png" alt="ad3" />
+      </div>
+
+      <div class="ad-item item" id="ad-item-4">
+        <img src="../images/04.png" alt="ad4" />
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+  var index = 1;
+  function run(){
+    index++;
+    if (index>4) index=1;
+    console.log(index);
+    for(var i=1; i<5; i++){
+      document.getElementById('ad-item-'+i).style.visibility='hidden';
+    }
+    document.getElementById('ad-item-'+index).style.visibility='visible';
+  };
+  setInterval('run()',3000);
+  </script>
+  <!-- ad end -->
+</body>
+</html>

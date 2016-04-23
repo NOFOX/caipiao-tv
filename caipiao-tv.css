@@ -41,6 +41,21 @@ ul {
   border: none;
   border-radius: 2px;
 }
+.banner{
+  width: 400px;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  z-index: 6;
+}
+.banner.kuaileshifen {
+  background-image: url('kuaileshifen.png');
+}
+.banner.shiyixuanwu {
+  background-image: url('shiyixuanwu.png');
+}
 .form {
   width: 400px;
   margin: 5vw auto;

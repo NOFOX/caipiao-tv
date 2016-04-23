@@ -1,0 +1,173 @@
+﻿body {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	font-family: lanting;
+    background: #ebcdb6;
+    font-size:16px;
+
+}
+@font-face {
+	font-family: lanting;
+	src:url(http://www.zhiliaogou.cn/caipiao/app/fucai/font/lanting.ttf);
+}
+div {
+	margin: 0px;
+	padding: 0px;
+}
+p,span,h1,h2,h3,h4,ul,li,tr,td{
+	margin: 0;
+	padding: 0;
+}
+.cub b p {
+	font-size:16px;
+}
+p {
+    font-size: 21px;
+    color: #000;
+}
+#header {
+	float: left;
+	width: 100%;
+}
+.nav_1 {
+	float: left;
+	width: 4%;
+	height: 60px;
+	background: #B0E3FF;
+}
+.nav_1 h2 {
+	color: #5B5B5B;
+}
+.nav_2 {
+	float: left;
+	width: 30%;
+	height: 60px;
+	background: #fff;
+}
+.nav_3 {
+	float: left;
+	width: 66%;
+	height: 60px;
+	background: #C08585;
+}
+.kaijianghaoma {
+	width: 100%;
+	height: 20px;
+	background: #F9002B;
+}
+.kaijianghaoma span b p{
+	font-size: 16px;
+	color:#fff;
+}
+.shuzihaomaqu {
+	width: 100%;
+	height: 20px;
+	background: #fff;
+}
+.nub {
+	width: 100%;
+	height: 20px;
+	background: #999;
+	font-family: 微软雅黑;
+}
+.cub {
+	float: left;
+	width: 12.5%;
+}
+.cub b p {
+	color: #000;
+}
+.zoushi {
+	width: 100%;
+	height: 20px;
+	background: #F9002B;;
+}
+.zoushi span b p{
+	font-size: 16px;
+	color:#fff;
+}
+.fenqu {
+	width: 100%;
+	height: 20px;
+}
+.fenqu_1 {
+	float: left;
+	width: 30%
+}
+.fenqu_2 {
+	float: left;
+    width: 10%;
+}
+.haoma {
+	float: left;
+	width: 100%;
+	height: 20px;
+	background: steelblue;
+}
+.haoma_1{
+	float: left;
+	width: 5%;
+}
+.haoma_1 p {
+	font-size: 18px;
+	color: #fff;
+}
+.pic {
+	float: left;
+	width: 100%;
+}
+.qi {
+	float: left;
+	width: 4%;
+	background: #B0E3FF;
+}
+.qi_1 {
+	border-top: #888 1px solid;
+	height: 21px;
+
+}
+.qi_1 p {
+    font-size: 21px;
+    color: #000;
+}
+.tle {
+
+}
+
+
+/***********************表格方面****************************/
+table{
+    width: 100%;
+    border-collapse:collapse;
+    border:1px solid black;
+    cellpadding:0;
+    cellspacing:0;
+
+}
+td{
+
+
+}
+
+ul {
+	width: 100%;
+}
+
+
+#myTable1 tbody tr td{
+	padding: 0;
+	border: 1px solid #ddba9f;
+	line-height: 21px;
+	height: 21px;
+	text-align: center;
+}
+#myTable2 tbody tr td{
+	padding: 0;
+	border: 1px solid #ddba9f;
+	text-align: center;
+	line-height: 21px;
+	height: 21px;
+	width: 5%;
+	background:#e2e6bd;
+}
