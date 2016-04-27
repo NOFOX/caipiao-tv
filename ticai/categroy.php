@@ -14,6 +14,7 @@
       <div class="category-items">
         <!-- <a href="categroy.php" class="category-item test">刷新</a> -->
         <a href="0329/kaijiang.php" class="category-item">默认版</a>
+        <a href="ticaitest/kaijiang.php" class="category-item">测试</a>
         <a href="0225/kaijiang.php" class="category-item">高清版</a>
         <a href="0130/kaijiang.php" class="category-item">高清滚动版</a>
         <a href="1215/kaijiang.php" class="category-item">前三值滚动版</a>

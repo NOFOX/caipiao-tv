@@ -1,0 +1,265 @@
+﻿body {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	font-family: lanting;
+    background: #d5c0ab;
+    font-size:15px;
+	/*屏幕旋转*/
+	overflow: hidden;
+	/*position: fixed;
+	left: 0;
+	top: 100vmin;*/
+	/*-webkit-transform-origin: 0 0;*/
+	/*transform-origin: 0 0;*/
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	width: 100vmin;
+	height: 100vmax;
+
+}
+@font-face {
+	font-family: lanting;
+	src:url(http://www.zhiliaogou.cn/caipiao/app/fucai/font/lanting.ttf);
+}
+div {
+	margin: 0px;
+	padding: 0px;
+}
+p,span,h1,h2,h3,h4,ul,li,tr,td div{
+	margin: 0;
+	padding: 0;
+}
+p {
+    font-size: 14.5px;
+    color: #000;
+}
+#header {
+	float: left;
+	width: 100%;
+}
+.nav_1 {
+	float: left;
+	width: 2.5%;
+	height: 60px;
+	background: #B0E3FF;
+}
+.nav_1 h2 {
+	color: #5B5B5B;
+    /* float: left; */
+    margin: 0 auto;
+    padding: 0;
+}
+.nav_2 {
+	float: left;
+	width: 12%;
+	height: 60px;
+	background: #fff;
+}
+.nav_3 {
+	float: left;
+	width: 34.5%;
+	height: 60px;
+	background: #C08585;
+}
+.nav_new {
+	float: left;
+	width: 63%;
+	height: 40px;
+	background: #F9002B;
+}
+.nav_4 {
+	float: left;
+	width: 21%;
+}
+.nav_4 p{
+	color:#000;
+}
+.nav_new  p {
+	margin-top: 5px;
+	color: #fff;
+	font-size: 25px;
+}
+.kaijianghaoma {
+	width: 100%;
+	height: 20px;
+	background: #F9002B;
+}
+.kaijianghaoma span b p{
+	font-size: 15px;
+	color:#fff;
+}
+.shuzihaomaqu {
+	width: 100%;
+	height: 20px;
+	background: #fff;
+}
+.nub {
+	width: 100%;
+	height: 20px;
+	background: #999;
+	font-family: 微软雅黑;
+}
+.cub {
+	float: left;
+	width: 20%;
+}
+.cub b p {
+	color: #000;
+}
+.nav_3 li {
+	width: 50%;
+	height: 20px;
+	background: #F9002B;;
+}
+.zoushi span b p{
+	font-size: 15px;
+	color:#fff;
+}
+.fenqu {
+	width: 100%;
+	height: 20px;
+}
+.fenqu_1 {
+	float: left;
+	width: 30%
+}
+.fenqu_2 {
+	float: left;
+    width: 10%;
+}
+.haoma {
+	float: left;
+	width: 100%;
+	height: 40px;
+	background: #1F106D;
+}
+.haoma p {
+	margin-top: 10px;
+}
+.haoma_1{
+	float: left;
+	width: 5%;
+}
+.haoma p {
+	font-size: 18px;
+	color: #fff;
+}
+.pic {
+	float: left;
+	width: 100%;
+}
+.qi {
+	float: left;
+	width: 4%;
+	background: #B0E3FF;
+}
+.qi_1 {
+	border-top: #888 1px solid;
+	height: 14px;
+
+}
+.qi_1 p {
+    font-size: 10px;
+    color: #000;
+}
+.tle {
+
+}
+
+
+/***********************表格方面****************************/
+table{
+    width: 100%;
+    border-collapse:collapse;
+    border:1px solid black;
+    cellpadding:0;
+    cellspacing:0;
+
+}
+td{
+
+
+}
+
+ul {
+	width: 100%;
+}
+
+
+#myTable1 tbody tr td{
+    padding: 0;
+    border: 1px solid #c4ac94;
+    line-height: 10px;
+    height: 16px;
+    text-align: center;
+    width: 5.5%;
+}
+#myTable2 tbody tr td{
+    padding: 0;
+    line-height: 14px;
+    border: 1px solid #c4ac94;
+    text-align: center;
+	height:15px;
+	width: 9%;
+}
+#myTable2 tbody tr td p{
+	/*margin-top: 5px;*/
+	background:#72A5D0;
+	/*text-shadow: 1px 1px 0px #000;*/
+	line-height: 19px;
+	height: 15px;
+        font-size:17px;
+	color:#000;
+}
+#myTable3 tbody tr td{
+    padding: 0;
+    line-height: 14px;
+    border: 1px solid #c4ac94;
+    text-align: center;
+    height:15px;
+	width: 9%;
+}
+#myTable3 tbody tr td p{
+	/*margin-top: 5px;*/
+	/*background:#E5EDF2;*/
+	/*text-shadow: 1px 1px 0px #000;*/
+	line-height: 19px;
+	height: 15px;
+    font-size:14px;
+color:#000;
+}
+#myTable4 tbody tr td{
+    padding: 0;
+    line-height: 14px;
+    border: 1px solid #c4ac94;
+    text-align: center;
+	height:15px;
+	width: 9%;
+}
+#myTable4 tbody tr td p{
+	/*margin-top: 5px;*/
+	background:#E1C6E4;
+	/*text-shadow: 1px 1px 0px #000;*/
+	line-height: 19px;
+	height: 15px;
+    font-size:14px;
+color:#000;
+}
+#myTable5 tbody tr td{
+    padding: 0;
+    line-height: 14px;
+    border: 1px solid #c4ac94;
+    text-align: center;
+	height:15px;
+	width: 9%;
+}
+#myTable5 tbody tr td p{
+	/*margin-top: 5px;*/
+	/*background:#E5EDF2;*/
+	/*text-shadow: 1px 1px 0px #000;*/
+	line-height: 19px;
+	height: 15px;
+    font-size:14px;
+color:#000;
+}
