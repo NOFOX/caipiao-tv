@@ -9,7 +9,22 @@
     <script type="text/javascript" src="../jquery-2.2.2.min.js"></script>
     <script type="text/javascript" src="../table.js"></script>
     <script type="text/javascript" src="../table_1.js"></script>
-	<link rel="stylesheet" type="text/css" href="style5.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style media="screen">
+		body {
+			/*屏幕旋转*/
+			overflow: hidden;
+			position: fixed;
+			left: 100vmax;
+			top: 0;
+			width: 100vmin;
+			height: 100vmax;
+			-webkit-transform-origin: 0 0;
+			transform-origin: 0 0;
+			-webkit-transform: rotate(90deg);
+			transform: rotate(90deg);
+		}
+	</style>
 </head>
 <body>
 	<div id="header">

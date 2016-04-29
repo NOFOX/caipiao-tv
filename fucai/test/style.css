@@ -5,17 +5,7 @@ body {
 	font-family: lanting;
 	background: #ebcdb6;
 	font-size:15px;
-	/*屏幕旋转*/
-	overflow: hidden;
-	position: fixed;
-	left: 0;
-	top: 100vmin;
-	width: 100vmin;
-	height: 100vmax;
-	-webkit-transform-origin: 0 0;
-	transform-origin: 0 0;
-	-webkit-transform: rotate(-90deg);
-	transform: rotate(-90deg);
+
 }
 @font-face {
 	font-family: lanting;
