@@ -5,7 +5,7 @@
   <title>ad</title>
   <style>
   .ad-wrapper {
-    width: 100vw;
+    width: 100vmin;
     height: 80px;
     overflow: hidden;
     position: fixed;
@@ -16,7 +16,7 @@
   }
 
   .ad-item {
-    width: 100vw;
+    width: 100%;
     position: absolute;
     left: 0;
     bottom: 0;
