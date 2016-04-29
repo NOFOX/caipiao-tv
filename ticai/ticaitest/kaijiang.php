@@ -4,37 +4,116 @@
 <html>
 <head>
 	<title>知了彩票</title>
+  <meta name="viewport" content="initial-scale=1" />
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="stylesheet" type="text/css" href="style429.css">
     <script type="text/javascript" src="../jquery-2.2.2.min.js"></script>
-<script type="text/javascript" src="../chartDrawLink.js"></script>
+<!-- <script type="text/javascript" src="../chartDrawLink.js"></script> -->
     <script type="text/javascript" src="../table.js"></script>
     <script type="text/javascript" src="../table_1.js"></script>
     <script type="text/javascript" src="../table_2.js"></script>
     <script type="text/javascript" src="../table_3.js"></script>
     <script type="text/javascript" src="../table_4.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+  .ball{text-align:center}
+  .ball>p{
+    background-color:#000 !important;
+    /*border-radius:50%;*/
+    display:block;
+    position: relative;
+    z-index: 100;
+    color:#fff !important;
+    height:18px;
+    margin:auto;
+  }
+  .ball.ball-green>p{
+    background-color:mediumseagreen !important;
+  }
+  .ball.ball-blue>p{
+    background-color:cornflowerblue !important;
+  }
+
+  body {
+    /*屏幕旋转*/
+    width: 100vmin;
+    height: 100vmax;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 100vh;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+  .ball {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #555;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  </style>
 </head>
 <body>
-<style>
-    .ball{text-align:center}
-    .ball>p{
-        background-color:#000 !important;
-        /*border-radius:50%;*/
-        display:block;
-        position: relative;
-        z-index: 100;
-        color:#fff !important;
-        height:18px;
-        margin:auto;
-    }
-    .ball.ball-green>p{
-        background-color:mediumseagreen !important;
-    }
-    .ball.ball-blue>p{
-        background-color:cornflowerblue !important;
-    }
-    </style>
+  <script type="text/javascript">
+  function TableDrawLink(tableId,color,type) {
+      var stage = $('<div id="stage-trend-'+tableId+'" class="stage-trend"></div>');
+      var svg = $('<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:fixed;left:-7px;top:7px"></svg>');
+      var points = [];
+      // 折线
+      var polyline = $('<polyline points="" style="fill: none; stroke:#333; stroke-width:1"></polyline>');
+      // 小球
+      var balls = $('<div class="balls" style="position: fixed; left: -16px; top: -2px; z-index:102"></div>')
+      var tBall = '<div class="ball"></div>';
+
+      // 遍历dom生成点
+      $('#'+tableId+' tr p').each(function(){
+        if($(this).html()){
+          var point = {
+            x: $('html').height()-$(this).position().top,
+            y: $(this).position().left,
+            value: $(this).html()
+          }
+          points.push(point);
+        }
+      })
+
+      var positions = [];
+      for(i in points){
+        // 记录折线的各个点
+        positions.push(points[i].x);
+        positions.push(points[i].y);
+        // 生成小球
+        var ball = $(tBall);
+        ball.css('left',points[i].x).css('top',points[i].y)
+        ball.html(points[i].value);
+        balls.append(ball);
+      }
+
+      sPositions = positions.join(' ');
+      polyline.attr('points',sPositions);
+      // 折线
+      svg.append(polyline);
+      // 舞台写入折线和小球
+      stage.append(svg).append(balls);
+      // 写入html
+      if($('#stage-trend-'+tableId).length){
+        $('#stage-trend-'+tableId).html(stage.html());
+      }else {
+        $('body').prepend(stage);
+      }
+      // 刷新svg
+      // $('.balls').html($('.balls').html());
+  }
+
+  </script>
 	<div id="header">
 		<div class="nav_1">
 			<h2>期<br>数</h2>
