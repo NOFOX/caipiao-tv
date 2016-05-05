@@ -18,6 +18,7 @@
         <a href="0225/kaijiang.php" class="category-item">高清版</a>
         <a href="0222/kaijiang.php" class="category-item">高清滚动版</a>
         <a href="1215/kaijiang.php" class="category-item">前三值滚动版</a>
+        <a href="0222-60/kaijiang.php" class="category-item">滚动版60'</a>
       </div>
     </section>
   </content>

@@ -6,7 +6,7 @@
   <style>
   .ad-wrapper {
     width: 100vmin;
-    height: 80px;
+    height: 100px;
     overflow: hidden;
     position: fixed;
     bottom: 0;
@@ -37,14 +37,6 @@
 
       <div class="ad-item item active">
         <img src="../images/01.png?h= <?php echo md5(microtime(true)); ?>" alt="ad-1" />
-      </div>
-
-      <div class="ad-item item">
-        <img src="../images/02.png?h= <?php echo md5(microtime(true)); ?>" alt="ad-2" />
-      </div>
-
-      <div class="ad-item item">
-        <img src="../images/03.png?h= <?php echo md5(microtime(true)); ?>" alt="ad-3" />
       </div>
       <!-- 添加广告时复制上面结构. -->
     </div>
